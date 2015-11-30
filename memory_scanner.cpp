@@ -22,12 +22,12 @@ int main() {
 		switch (command) {
 		case '+':
 			/* Bei Kommando '+' soll die Speicheradresse um 1 inkrementiert werden und der Inhalt des Speichers ausgegeben werden !*/
-			*pstart_variable = start_variable++;
+			pstart_variable += 1;
 			cout << "current address: " << pstart_variable << " current content: " << start_variable << endl;;
 			break;
 		case '-':
 			/* Bei Kommando '-' soll die Speicheradresse um 1 dekrementiert werden und der Inhalt des Speichers ausgegeben werden !*/
-			*pstart_variable = start_variable--;
+			pstart_variable -= 1;
 			cout << "current address: " << pstart_variable << " current content: " << start_variable << endl;
 			break;
 		case 'm':
@@ -48,6 +48,6 @@ int main() {
 		default:
 			cout << "command not understood!" << endl;
 		}
-		cout << "adress:" << pstart_variable << endl;
 	}
+	cout << "adress:" << &pstart_variable << endl;
 }
